@@ -11,6 +11,22 @@ export default defineConfig({
       formats: ["es"],
       fileName: (format) => `index.${format}.js`,
     },
+    rollupOptions: {
+      external: [
+        "react",
+        "react-dom",
+        "react/jsx-runtime",
+        "styled-components",
+        "react-icons/md",
+        "@inubekit/foundations",
+        "@inubekit/select",
+      ],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
+    },
   },
   plugins: [react(), dts({ rollupTypes: true })],
 });

@@ -1,5 +1,5 @@
 {
-  "name": "@inubekit/your-component-name",
+  "name": "@inubekit/monthpicker",
   "homepage": "https://inubeds.vercel.app/",
   "author": "inube",
   "main": "dist/index.es.js",
@@ -31,11 +31,17 @@
     "auto": "auto",
     "changelog": "npm run auto changelog",
     "version": "rm -rf dist && npm run build",
-    "release": "git push --follow-tags && npm run auto release"
+    "release": "git push --follow-tags && npm run auto release",
+    "autorelease": "auto shipit"
   },
   "dependencies": {
+    "@inubekit/foundations": "^5.1.0",
+    "@inubekit/select": "^5.0.0"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "styled-components": "^6.1.8"
   },
   "publishConfig": {
@@ -52,7 +58,6 @@
     "@storybook/react": "^8.0.2",
     "@storybook/react-vite": "^8.0.2",
     "@storybook/test": "^8.0.2",
-    "@storybook/addon-onboarding": "^1.0.10",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@types/styled-components": "^5.1.34",
@@ -77,7 +82,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selsa-inube/inubekit-REPOSITORY-NAME.git"
+    "url": "git+https://github.com/selsa-inube/inubekit-monthpicker.git"
   },
   "auto": {
     "plugins": [

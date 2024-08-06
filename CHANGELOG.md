@@ -1,3 +1,15 @@
+# v1.3.0 (Tue Aug 06 2024)
+
+#### 🚀 Enhancement
+
+- Update Select Dependencies in Components to Support Option Clearance [#4](https://github.com/selsa-inube/inubekit-monthpicker/pull/4) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.2.0 (Fri Aug 02 2024)
 
 #### 🚀 Enhancement

@@ -17,12 +17,9 @@ const MonthpickerController = (props: IMonthpickerController) => {
   } = props;
   const [selectedMonth, setSelectedMonth] = useState<string>(value);
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    newValue: string,
-  ) => {
+  const handleChange = (name: string, newValue: string) => {
     setSelectedMonth(newValue);
-    onChange && onChange(event, newValue);
+    onChange && onChange(name, newValue);
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { IMonthpickerOrder } from "./props";
 import { Select } from "@inubekit/select";
 
@@ -7,7 +7,7 @@ interface IMonthpicker {
   end?: number;
   locales?: string;
   order?: IMonthpickerOrder;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>, value: string) => void;
+  onChange: (name: string, value: string) => void;
   placeholder?: string;
   value?: string;
 }
@@ -23,7 +23,9 @@ const Monthpicker = (props: IMonthpicker) => {
     onChange,
   } = props;
 
-  const [months, setMonths] = useState<string[]>([]);
+  const [months, setMonths] = useState<
+    { id: string; label: string; value: string }[]
+  >([]);
 
   useEffect(() => {
     const formatter = new Intl.DateTimeFormat(locales, { month: "long" });
@@ -34,21 +36,24 @@ const Monthpicker = (props: IMonthpicker) => {
     if (order === "desc") {
       filteredMonths = filteredMonths.reverse();
     }
-    setMonths(filteredMonths);
+    setMonths(
+      filteredMonths.map((month, index) => ({
+        id: index.toString(),
+        label: month.charAt(0).toUpperCase() + month.slice(1),
+        value: month,
+      })),
+    );
   }, [start, end, locales, order]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event, event.target.innerText);
+  const handleChange = (name: string, value: string) => {
+    onChange(name, value);
   };
 
   return (
     <Select
       name="month"
       placeholder={placeholder}
-      options={months.map((month, index) => ({
-        id: index.toString(),
-        label: month,
-      }))}
+      options={months}
       value={value}
       onChange={handleChange}
     />

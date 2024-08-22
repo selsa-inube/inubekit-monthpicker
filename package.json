@@ -18,7 +18,8 @@
     }
   },
   "files": [
-    "dist/index.es.js"
+    "dist/index.es.js",
+    "dist/index.es.d.ts"
   ],
   "scripts": {
     "dev": "vite",
@@ -36,7 +37,7 @@
   },
   "dependencies": {
     "@inubekit/foundations": "^5.8.1",
-    "@inubekit/select": "^5.10.0"
+    "@inubekit/select": "^6.10.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

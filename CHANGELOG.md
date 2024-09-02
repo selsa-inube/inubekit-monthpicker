@@ -1,3 +1,15 @@
+# v1.10.0 (Mon Sep 02 2024)
+
+#### 🚀 Enhancement
+
+- Auto-merge PR [#11](https://github.com/selsa-inube/inubekit-monthpicker/pull/11) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.9.0 (Fri Aug 30 2024)
 
 #### 🚀 Enhancement

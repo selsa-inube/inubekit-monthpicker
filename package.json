@@ -36,7 +36,7 @@
     "autorelease": "auto shipit"
   },
   "dependencies": {
-    "@inubekit/foundations": "^5.11.1",
+    "@inubekit/foundations": "^5.11.2",
     "@inubekit/select": "^6.10.0"
   },
   "peerDependencies": {

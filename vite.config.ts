@@ -18,7 +18,6 @@ export default defineConfig({
         "react/jsx-runtime",
         "styled-components",
         "react-icons/md",
-        "@inubekit/foundations",
         "@inubekit/select",
       ],
       output: {
